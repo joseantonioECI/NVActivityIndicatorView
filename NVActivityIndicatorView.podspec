@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => "MIT", :file => "LICENSE" }
   s.author           = { "Vinh Nguyen" => "ninjaprox@gmail.com" }
   s.social_media_url = "http://twitter.com/ninjaprox"
+  s.static_framework = true
 
   s.ios.deployment_target  = "8.0"
   s.tvos.deployment_target = "9.0"

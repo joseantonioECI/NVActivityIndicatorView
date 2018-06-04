@@ -66,7 +66,7 @@ class NVActivityIndicatorAnimationBallClipRotatePulse: NVActivityIndicatorAnimat
         // Rotate animation
         let rotateAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
 
-        rotateAnimation.keyTimes = scaleAnimation.keyTimes
+        rotateAnimation.keyTimes = [0, 0.5, 1]
         rotateAnimation.timingFunctions = [timingFunction, timingFunction]
         rotateAnimation.values = [0, Double.pi, 2 * Double.pi]
         rotateAnimation.duration = duration

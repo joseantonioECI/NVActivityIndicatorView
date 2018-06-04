@@ -9,13 +9,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target  = "8.0"
   s.tvos.deployment_target = "9.0"
-<<<<<<< HEAD:NVActivityIndicatorView.podspec
-  s.static_framework = true
-  s.source       = { :git => "https://github.com/ninjaprox/NVActivityIndicatorView.git", :tag => s.version }
-=======
 
   s.source       = { :git => "https://github.com/joseantonioECI/NVActivityIndicatorView.git", :tag => s.version }
->>>>>>> feature/delete_scale_animation_BallClipRotate:NVActivityIndicatorViewWithoutPulse.podspec
 
   s.subspec "Presenter" do |ps|
     ps.source_files = "NVActivityIndicatorView/NVActivityIndicatorView/**/*.swift"

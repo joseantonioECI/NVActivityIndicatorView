@@ -62,13 +62,6 @@ class NVActivityIndicatorAnimationBallClipRotatePulse: NVActivityIndicatorAnimat
     }
 
     func bigCircleWith(duration: CFTimeInterval, timingFunction: CAMediaTimingFunction, layer: CALayer, size: CGSize, color: UIColor) {
-        // Scale animation
-        let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-
-        scaleAnimation.keyTimes = [0, 0.5, 1]
-        scaleAnimation.timingFunctions = [timingFunction, timingFunction]
-        scaleAnimation.values = [1, 0.6, 1]
-        scaleAnimation.duration = duration
 
         // Rotate animation
         let rotateAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
@@ -81,7 +74,7 @@ class NVActivityIndicatorAnimationBallClipRotatePulse: NVActivityIndicatorAnimat
         // Animation
         let animation = CAAnimationGroup()
 
-        animation.animations = [scaleAnimation, rotateAnimation]
+        animation.animations = [rotateAnimation]
         animation.duration = duration
         animation.repeatCount = HUGE
         animation.isRemovedOnCompletion = false

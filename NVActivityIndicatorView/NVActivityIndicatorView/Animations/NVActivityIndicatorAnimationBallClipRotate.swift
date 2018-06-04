@@ -31,13 +31,6 @@ class NVActivityIndicatorAnimationBallClipRotate: NVActivityIndicatorAnimationDe
 
     func setUpAnimation(in layer: CALayer, size: CGSize, color: UIColor) {
         let duration: CFTimeInterval = 0.75
-
-        //    Scale animation
-        let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-
-        scaleAnimation.keyTimes = [0, 0.5, 1]
-        scaleAnimation.values = [1, 0.6, 1]
-
         // Rotate animation
         let rotateAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
 
@@ -47,7 +40,7 @@ class NVActivityIndicatorAnimationBallClipRotate: NVActivityIndicatorAnimationDe
         // Animation
         let animation = CAAnimationGroup()
 
-        animation.animations = [scaleAnimation, rotateAnimation]
+        animation.animations = [rotateAnimation]
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = duration
         animation.repeatCount = HUGE
